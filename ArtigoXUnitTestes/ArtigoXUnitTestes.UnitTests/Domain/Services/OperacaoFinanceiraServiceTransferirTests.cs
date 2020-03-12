@@ -7,7 +7,7 @@ namespace ArtigoXUnitTestes.UnitTests.Domain.Services
     public class OperacaoFinanceiraServiceTransferirTests
     {
         [Fact]
-        public void ContaOrigemTemLimite_ChamadoComContasEValoresValidos_RetornarSucessoEDebitarDosSaldosELImiteCorretamente()
+        public void ContaOrigemTemLimiteESaldoSuficiente_ChamadoComContasEValoresValidos_RetornarSucessoEDebitarDosSaldosELImiteCorretamente()
         {
             const decimal valorTransacao = 500;
             const decimal contaCorrenteOrigemSaldoEsperado = 9500;
