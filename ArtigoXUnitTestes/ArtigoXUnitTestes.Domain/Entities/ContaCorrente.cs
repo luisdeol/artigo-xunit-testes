@@ -5,12 +5,15 @@
         private const decimal SALDO_INICIAL = 10000;
         private const decimal LIMITE_INICIAL = 20000;
 
-        public ContaCorrente(string responsavel, int agencia, int digito, int numero)
+        public ContaCorrente(string responsavel, int agencia, int digito, int numero, string email, string telefone)
         {
             Responsavel = responsavel;
             Agencia = agencia;
             Digito = digito;
             Numero = numero;
+            Email = email;
+            Telefone = telefone;
+
             Saldo = SALDO_INICIAL;
             Limite = LIMITE_INICIAL;
         }
@@ -21,7 +24,8 @@
         public int Numero { get; private set; }
         public decimal Saldo { get; private set; }
         public decimal Limite { get; private set; }
-
+        public string Email { get; private set; }
+        public string Telefone { get; private set; }
         private bool TemLimite(decimal valor)
         {
             return Limite >= valor;
