@@ -9,10 +9,10 @@ using Xunit;
 
 namespace ArtigoXUnitTestes.UnitTests.Application.Services
 {
-    public class ContaCorrenteServiceTests
+    public class ContaCorrenteServiceNotificarContaCorrenteTests
     {
         [Fact]
-        public void ContaExistenteNotificacaoFuncionando_ChamadoComContaCorrenteValida_RetornarSucesso()
+        public void ContaExistenteNotificacaoFuncionando_ChamadoDocumentoValido_RetornarSucesso()
         {
             // Arrange
             var contaCorrente = ContaCorrenteFactory.GetContaOrigemValida();
@@ -37,7 +37,7 @@ namespace ArtigoXUnitTestes.UnitTests.Application.Services
         }
 
         [Fact]
-        public void ContaExistenteMasNotificacaoNaoFuncionando_ChamadoComContaCorrenteValida_RetornarFalha()
+        public void ContaExistenteMasNotificacaoNaoFuncionando_ChamadoDocumentoValido_RetornarFalha()
         {
             // Arrange
             var contaCorrente = ContaCorrenteFactory.GetContaOrigemValida();
