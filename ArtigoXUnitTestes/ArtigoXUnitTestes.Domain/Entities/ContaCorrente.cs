@@ -5,9 +5,10 @@
         private const decimal SALDO_INICIAL = 10000;
         private const decimal LIMITE_INICIAL = 20000;
 
-        public ContaCorrente(string responsavel, int agencia, int digito, int numero, string email, string telefone)
+        public ContaCorrente(string responsavel, string documento, int agencia, int digito, int numero, string email, string telefone)
         {
             Responsavel = responsavel;
+            Documento = documento;
             Agencia = agencia;
             Digito = digito;
             Numero = numero;
@@ -19,6 +20,7 @@
         }
 
         public string Responsavel { get; private set; }
+        public string Documento { get; private set; }
         public int Agencia { get; private set; }
         public int Digito { get; private set; }
         public int Numero { get; private set; }

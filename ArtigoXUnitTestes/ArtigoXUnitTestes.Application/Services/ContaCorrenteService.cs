@@ -1,8 +1,5 @@
 ﻿using ArtigoXUnitTestes.Domain.Repositories;
 using ArtigoXUnitTestes.Infrastructure.Services;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ArtigoXUnitTestes.Application.Services
 {

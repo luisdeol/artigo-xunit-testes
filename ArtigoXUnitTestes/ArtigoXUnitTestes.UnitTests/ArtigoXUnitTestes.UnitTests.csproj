@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ArtigoXUnitTestes.Application\ArtigoXUnitTestes.Application.csproj" />
     <ProjectReference Include="..\ArtigoXUnitTestes.Domain\ArtigoXUnitTestes.Domain.csproj" />
   </ItemGroup>
 
