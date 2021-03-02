@@ -4,7 +4,9 @@ using ArtigoXUnitTestes.Domain.Repositories;
 using ArtigoXUnitTestes.Infrastructure.Services;
 using ArtigoXUnitTestes.UnitTests.Application.Factories;
 using ArtigoXUnitTestes.UnitTests.Domain.Factories;
+using AutoFixture;
 using Moq;
+using System.Linq;
 using Xunit;
 
 namespace ArtigoXUnitTestes.UnitTests.Application.Services
@@ -15,7 +17,13 @@ namespace ArtigoXUnitTestes.UnitTests.Application.Services
         public void ContaExistenteNotificacaoFuncionando_ChamadoDocumentoValido_RetornarSucesso()
         {
             // Arrange
-            var contaCorrente = ContaCorrenteFactory.GetContaOrigemValida();
+            var fixture = new Fixture();
+            var contaCorrente = fixture.Create<ContaCorrente>();
+            // ANTES: var contaCorrente = ContaCorrenteFactory.GetContaOrigemValida();
+
+            fixture.RepeatCount = 5;
+            var operacoes = fixture.CreateMany<OperacaoContaCorrente>().ToList();
+
             var respostaNotificacaoViewModel = RespostaNotificacaoViewModelFactory.ObterRespostaSucesso();
 
             var contaCorrenteRepositoryMock = new Mock<IContaCorrenteRepository>();
